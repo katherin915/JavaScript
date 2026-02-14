@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript</title>
+        <script >
+            var a ={
+                fname: "Sanju",
+                lname: "Kumar",
+                age: 25,
+                city: "Pune",
+                favMovies:["3 idiots","PK","Dangal"],
+                salary:function(){
+                    return 25000;
+                },
+                fullname:function(){
+                    return this.fname + " " + this.lname;
+                },
+                living:{
+                    'country':"India",
+                    'state':"Maharashtra",
+                    'pincode':411033
+                }
+
+            }
+            document.write(a);
+            document.write("Name: "+a.name+"<br>");
+            document.write("favMovies: "+a.favMovies+"<br>");
+
+            document.write("Salary: "+a.salary()+"<br>");
+            document.write("Full Name: "+a.fullname()+"<br>");
+            document.write("Country: "+a.living.country+"<br>");
+
+            console.log(a);
+
+            //method 2 to create object
+            var b= new Object();
+            b.fname="Akanksha";
+            b.lname="Sharma";
+            b.age=24;
+            b.city="Mumbai";
+            document.write("Name: "+b['fname']+" "+b['lname']+"<br>");
+           
+        </script>
+    </head>
+    <body onscroll="hello()">
+        <script>
+        </script>
+    </body>
+</html>

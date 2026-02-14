@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Events</title>
+    <link rel="stylesheet" href="formEvents.css">
+</head>
+
+<body>
+   <form onsubmit="submitFunction()">
+		<label for="name">Name</label><input type="text" id="name" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)" onselect="selectFunction()"  oninvalid="alert('please fill first name')" required><br><br>
+
+		<label for="class">Class</label><input type="text" id="class" onfocus="focusFunction(this)" onblur="blurFunction(this)"><br><br>
+
+		<select id="countrySelect" onfocus="focusFunction(this)" onblur="blurFunction(this)" onchange="changeFunction(this)">
+			<option value="India">India</option>
+			<option value="Pakistan">Pakistan</option>
+			<option value="Bangladesh">Bangladesh</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+			<option value="Nepal">Nepal</option>
+		</select>
+		<br>
+        <button type="submit">Submit</button>
+	</form>
+
+	<div id="test" ></div>
+	<script>
+		/*  JavaScript Focus Event  */
+
+		function focusFunction(element){
+			element.style.background = "lime";
+		} 
+
+		/*  JavaScript Blur Event  */
+			function blurFunction(element){
+				element.style.background = "";
+			} 
+
+		/*  JavaScript Input Event  */
+			function inputFunction(element){
+				var x = element.value;
+				document.getElementById("test").innerHTML = x;
+			} 
+        /*  JavaScript Change Event  */
+            function changeFunction(element){
+                var y = element.value;
+                document.getElementById("test").innerHTML = y;
+            }
+
+        /*  JavaScript Select Event  */
+            function selectFunction(){
+                var selectedText = document.getElementById("name").value;
+                alert("You selected: " + selectedText);
+            }
+        /*  JavaScript Submit Event  */
+            function submitFunction(){
+                alert("Form Submitted Successfully!");
+            }
+	</script>
+</body>
+
+</html>

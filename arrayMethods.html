@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript</title>
+        <script >
+            var ary=["sanju","Katherin","Anku","Archana"];
+            document.write(ary+"<br><br>");
+            //shift and unshift
+            ary.shift();
+            document.write(ary+"<br><br>");
+
+            ary.unshift("Akanksha");
+            document.write(ary+"<br><br>");
+
+            //sort and reverse
+            ary.sort();
+            document.write(ary+"<br>");
+
+            ary.reverse();
+            document.write(ary+"<br>");
+
+            //concat and join
+            var b=["Bhumi","Manu"];
+            var c=ary.concat(b);
+            document.write("concatenated array is:"+c+"<br>");
+            var d= c.join("*");
+            document.write("joined array is:"+d+"<br>");
+
+            //splice to add new elements and remove existing elements
+            ary.splice(1,2,"Pooja","Ankita");
+            document.write(ary+"<br>");
+            //splice to remove elements
+            ary.splice(2,2);
+            document.write(ary+"<br>");
+
+            //isArray function
+            var a=["apple","banana","mango","grapes"];
+            document.write(Array.isArray(a)+"<br>");
+
+            var b=Array.isArray("sanju");
+            document.write(b+"<br>");
+
+            //some
+            var ages=[18,22,25,30,15,40];
+            document.write(ages+"<br>");
+            var num=ages.some(checkAdult);
+            document.write("Is there any adult in the array? "+num+"<br>");
+
+            function checkAdult(age){
+                return age>=18;
+            }
+
+            //every
+            var num1=ages.every(checkAdult);
+            document.write("Are all adults in the array? "+num1+"<br>");
+            //find
+            var found=ages.find(checkAdult);
+            document.write("First adult age found in the array is: "+found+"<br>");
+            //findIndex
+            var foundindex=ages.findIndex(checkAdult);
+            document.write("First adult age index found in the array is: "+foundindex+"<br>");
+            //filter
+            var e=ages.filter(checkAdult);
+            document.write("All adult ages in the array are: "+e+"<br>");
+            //toString
+
+            var str=ages.toString();
+            document.write("Array converted to string is: "+str+"<br>");
+            //forEach
+            document.write("Using forEach to display all ages: <br>");
+            ages.forEach(function(value,index){
+                document.write(index+":"+value+"<br>");
+
+            });
+
+            //Map method
+            var arr=[11,3,8,16,35];
+            var brr=arr.map(test);
+            function test(x){
+                return x*10;
+            };
+            document.write("Original array is: "+arr+"<br>");
+            document.write("Array after using map method is: "+brr+"<br>");
+
+        </script>
+    </head>
+    <body >
+        <script>
+        </script>
+    </body>
+</html>

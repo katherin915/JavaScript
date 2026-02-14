@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript</title>
+    <script>
+        var students = [
+            { name: "Sanju", age: 25, city: "Pune" },
+            { name: "Akanksha", age: 24, city: "Mumbai" },
+            { name: "Katherin", age: 23, city: "Delhi" }
+        ];
+        console.log(students);
+        for (var i = 0; i < students.length; i++) {
+            document.write(students[i] + "<br>");
+            document.write("Name: " + students[i].name + ", Age: " + students[i].age + ", City: " + students[i].city + "<br><br>");
+        }
+        //const variable WITH ArrayObject      
+        const cars = new Array("Saab", "Volvo", "BMW");
+        cars[1] = "Mercedes";
+        document.write(cars + "<br>");
+        console.log(cars);
+
+        //const variable WITH Object
+        const name = {
+            firstName: "Sanju",
+            lastName: "Kumar"
+        };
+        name.firstName = "Akanksha";
+        console.log(name);
+
+        /*name={
+           firstName:"Pooja",
+           lastName:"Sharma"
+        };*///This will give error
+
+        console.log(name);
+
+        var obj = {
+            fname: "Sanju",
+            lname: "Kumar",
+            age: 25,
+            email: "sK123@gmail.com"
+        }
+        for (var i in obj) {
+            document.write(i + ": " + obj[i] + "<br>");
+        }
+
+        //map function
+        var arr = [
+            { fname: "Sanju", lname: "Kumar" },
+            { fname: "Akanksha", lname: "Sharma" },
+            { fname: "Katherin", lname: "Jones" }
+        ];
+        var b = arr.map(test);
+        function test(x) {
+            return x.fname + " " + x.lname;
+        }
+        document.write("Full names are: " + b + "<br>");
+    </script>
+</head>
+
+<body onscroll="hello()">
+    <script>
+    </script>
+</body>
+
+</html>
